@@ -2,10 +2,18 @@ document.querySelector('#button').addEventListener('click', function () {
     var query = document.querySelector('#recipe').value;
     let recipeList = document.querySelector('#recipeList');
     if(query== ''){
-        alert('enter a valur')
+        // alert('I Dont want to be a Empty Box ')
+        // document.querySelector('#alertText').innerHTML='I Dont want to be a Empty Box '
+       setTimeout(function(){
+        document.querySelector('#recipe').placeholder='I Dont want to be a Empty Box';
+       },1)
+       setTimeout(function(){
+        document.querySelector('#recipe').placeholder='Type here...';
+       },3000)
         return false;
        }
        recipeList.innerHTML = '';
+        
     $.ajax({
         method: 'GET',
         url: 'https://api.api-ninjas.com/v1/recipe?query=' + query,
