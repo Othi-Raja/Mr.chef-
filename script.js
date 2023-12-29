@@ -18,11 +18,11 @@ document.querySelector('#button').addEventListener('click', function () {
             //console.log(result[0])
             result.forEach(recipe => {
                 const recipeItem = document.createElement('div');
-                recipeItem.innerHTML = `<div data-aos="fade-in"  data-aos-offset="-200" id="animation" class='container' style='padding: 20px;  border: 0.6px solid orange; border-radius: 10px ; margin-bottom:10px; '>
-<h3 data-aos="fade-up" data-aos-offset="-300"  ><strong>Recipe:</strong>${recipe.title}</h3>
-<p data-aos="fade-up"  data-aos-offset="-300"  style='text-align: justify;'><strong>Ingredients:</strong> ${recipe.ingredients}</p>
-<p data-aos="fade-up" data-aos-offset="-300"   ><strong>Servings:</strong> ${recipe.servings}</p>
-<p data-aos="fade-up" data-aos-offset="-300"   style='text-align: justify;'><strong>Instructions:</strong> ${recipe.instructions}</p></div>`;
+                recipeItem.innerHTML = `<div data-aos="fade-in"  data-aos-offset="-280" id="animation" class='container recipelist' style='padding: 20px;  border: 0.6px solid orange; border-radius: 10px ; margin-bottom:10px; '>
+<h3 data-aos="fade-up" data-aos-offset="-280"  ><strong>Recipe:</strong>${recipe.title}</h3>
+<p data-aos="fade-up"  data-aos-offset="-280"  style='text-align: justify;'><strong>Ingredients:</strong> ${recipe.ingredients}</p>
+<p data-aos="fade-up" data-aos-offset="-280"   ><strong>Servings:</strong> ${recipe.servings}</p>
+<p data-aos="fade-up" data-aos-offset="-280"   style='text-align: justify;'><strong>Instructions:</strong> ${recipe.instructions}</p></div>`;
                 // Append each recipe item to the recipeList or any other container
                 recipeList.appendChild(recipeItem);
             });
