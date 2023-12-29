@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-square70x70logo" content=".../icons8-chef-70.png">
+    <meta name="msapplication-TileColor" content="#C0FFEE">
+    <meta name="application-name" content="Beautiful application name">
     <title>Mr.chef</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="./icons8-chef-filled-outline-favicons/Web/icons8-chef-filled-outline-16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="./icons8-chef-filled-outline-favicons/Web/icons8-chef-filled-outline-32.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="./icons8-chef-filled-outline-favicons/Web/icons8-chef-filled-outline-96.png">
+    <link type="image/png" sizes="70x70" rel="icon" href="./icons8-chef-filled-outline-favicons/Windows/icons8-chef-filled-outline-70.png">
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -29,13 +37,15 @@
             border-radius: 10px;
             border: 1px solid rgb(250, 229, 37);
             color: yellowgreen;
-            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
             outline: navajowhite;
         }
-        #search-recipe{
+
+        #search-recipe {
             transition: all 0.1s ease;
         }
-        #search-recipe:hover{
+
+        #search-recipe:hover {
             transform: translateY(-10px);
             transition: all 0.6s linear;
         }
@@ -45,14 +55,15 @@
             padding-left: 10px;
             cursor: pointer;
             transition: all 0.5s linear;
-            
-             
+
+
         }
-        .bi-arrow-right-circle-fill:hover{
+
+        .bi-arrow-right-circle-fill:hover {
             color: skyblue;
-            transform:translateX(10px);
+            transform: translateX(10px);
             transition: all 0.5s ease-in;
-         
+
         }
     </style>
 </head>
@@ -67,12 +78,13 @@
         </svg>
     </div>
     <div id="recipeList" class="container"></div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-       AOS.init();
+        AOS.init();
     </script>
 </body>
+
 </html>
