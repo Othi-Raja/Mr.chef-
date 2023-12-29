@@ -14,7 +14,7 @@ document.querySelector('#button').addEventListener('click', function () {
             result.forEach(recipe => {
                 const recipeItem = document.createElement('div');
                 recipeItem.innerHTML = `<div class='container' style='text-align: justify;  padding: 20px;  border: 1px solid orange; border-radius: 10px ; margin-bottom:10px; '>
-<h3><strong data-aos="fade-up">Recipe:</strong>${recipe.title}</h3>
+<h3><strong data-aos="fade-in">Recipe:</strong>${recipe.title}</h3>
 <p data-aos="fade-up" data-aos-delay="400" class="text-justify"><strong  data-aos="fade-up" data-aos-delay="300">Ingredients:</strong> ${recipe.ingredients}</p>
 <p data-aos="fade-up" data-aos-delay="500" class="text-justify"><strong  data-aos="fade-up" data-aos-delay="300">Servings:</strong> ${recipe.servings}</p>
 <p data-aos="fade-up" data-aos-delay="600" class="text-justify"><strong  data-aos="fade-up" data-aos-delay="300">Instructions:</strong> ${recipe.instructions}</p></div>`;
