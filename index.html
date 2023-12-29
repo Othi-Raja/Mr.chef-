@@ -27,6 +27,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            transition: all.9s linear;
         }
 
         input {
@@ -65,12 +66,14 @@
             transition: all 0.5s ease-in;
 
         }
+       
     </style>
 </head>
 
 <body>
     <div id="search-recipe">
         <input id="recipe" type="text" placeholder="Type here...">
+        <a id="alertText"></a>
         <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" fill="currentColor" id="button"
             class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
             <path class="arrow" fill-rule="evenodd"
