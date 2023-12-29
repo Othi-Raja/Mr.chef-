@@ -5,6 +5,7 @@ document.querySelector('#button').addEventListener('click', function () {
         alert('enter a valur')
         return false;
        }
+       recipeList.innerHTML = '';
     $.ajax({
         method: 'GET',
         url: 'https://api.api-ninjas.com/v1/recipe?query=' + query,
