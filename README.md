@@ -1,4 +1,4 @@
 ﻿# Mr.chef-
 ## Description
-###  Here you can Search recipes
+###  Here you can Search for recipes
  
