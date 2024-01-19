@@ -13,7 +13,8 @@
     <link type="image/png" sizes="32x32" rel="icon" href="./icons8-chef-filled-outline-favicons/Web/icons8-chef-filled-outline-32.png">
     <link type="image/png" sizes="96x96" rel="icon" href="./icons8-chef-filled-outline-favicons/Web/icons8-chef-filled-outline-96.png">
     <link type="image/png" sizes="70x70" rel="icon" href="./icons8-chef-filled-outline-favicons/Windows/icons8-chef-filled-outline-70.png">
-
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -42,8 +43,12 @@
             color: yellowgreen;
             box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
             outline: navajowhite;
+            z-index: 5;
         }
 
+        .size{
+            font-size: 20px;
+        }
         #search-recipe {
             transition: all 0.1s ease;
         }
@@ -74,12 +79,26 @@
         ::-webkit-scrollbar{
             display: none;
         }
+       #notfound{
+        margin: 30px;
+        z-index: 55;
+       }
+       .scale-up {
+            transform: scale(1);
+            transition: transform 0.5s ease-out;
+        }
+
+        .scale-up.hide {
+            transform: scale(0);
+        }
        
     </style>
 </head>
 
 <body>
-  
+  <div id="notfound" class="scale-up">
+
+  </div>
     <div id="search-recipe">
         
            
@@ -93,7 +112,6 @@
         </svg><br>
      
     </div>
- 
     <div id="recipeList" class="container"></div>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
