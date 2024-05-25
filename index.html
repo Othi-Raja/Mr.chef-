@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Ymmm,Recipe......Here You will have a N number Recipes">
@@ -23,7 +22,6 @@
             color: black;
             background-color: #F3F3F4;
         }
-
         #search-recipe {
             display: flex;
             align-items: center;
@@ -32,7 +30,6 @@
             margin: 0;
             transition: all.9s linear;
         }
-
         input {
             width: 80%;
             max-width: 400px;
@@ -46,33 +43,26 @@
             background-color: #183153;
             z-index: 5;
         }
-
         .size{
             font-size: 20px;
         }
         #search-recipe {
             transition: all 0.1s ease;
         }
-
         #search-recipe:hover {
             transform: translateY(-10px);
             transition: all 0.6s linear;
         }
-
         .bi-arrow-right-circle-fill {
             color: rgb(250, 229, 37);
             padding-left: 10px;
             cursor: pointer;
             transition: all 0.5s linear;
-
-
         }
-
         .bi-arrow-right-circle-fill:hover {
             color: skyblue;
             transform: translateX(10px);
             transition: all 0.5s ease-in;
-
         }
         .recipelist{
             overflow: hidden !important;;
@@ -88,30 +78,25 @@
             transform: scale(1);
             transition: transform 0.5s ease-out;
         }
-
+   input::placeholder{
+    color:rgba(255, 255, 255, 0.796);
+    text-align: center;
+   }
         .scale-up.hide {
             transform: scale(0);
         }
-       
     </style>
 </head>
-
 <body>
   <div id="notfound" class="scale-up">
-
   </div>
     <div id="search-recipe">
-        
-           
-         
-        <input id="recipe" type="text" placeholder="Type here...">
-       
+        <input id="recipe" type="text" placeholder="Find Your Favorite Dish 😋" autocomplete="off">
         <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" fill="#183153" id="button"
             class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
             <path class="arrow" fill-rule="evenodd"
                 d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
         </svg><br>
-     
     </div>
     <div id="recipeList" class="container"></div>
     <script src="script.js"></script>
@@ -122,5 +107,4 @@
         AOS.init();
     </script>
 </body>
-
 </html>
