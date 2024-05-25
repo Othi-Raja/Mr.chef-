@@ -3,12 +3,11 @@ document.querySelector('#button').addEventListener('click', function () {
     let recipeList = document.querySelector('#recipeList');
     let notfound = document.querySelector('#notfound');
     const bodyc = document.querySelector('body')
- 
     if(query== ''){
         // alert('I Dont want to be a Empty Box ')
         // document.querySelector('#alertText').innerHTML='I Dont want to be a Empty Box '
        setTimeout(function(){
-        document.querySelector('#recipe').placeholder='I Dont want to be a Empty Box';
+        document.querySelector('#recipe').placeholder='I Dont want to be an Empty Box';
        },1)
        setTimeout(function(){
         document.querySelector('#recipe').placeholder='Type here...';
@@ -16,7 +15,6 @@ document.querySelector('#button').addEventListener('click', function () {
         return false;
        }
        recipeList.innerHTML = '';
-        
     $.ajax({
         method: 'GET',
         url: 'https://api.api-ninjas.com/v1/recipe?query=' + query,
@@ -24,7 +22,6 @@ document.querySelector('#button').addEventListener('click', function () {
         contentType: 'application/json',
         success: function (result) {
        if(result.length == 0 || result == undefined) {
-        
         const recipeItem = document.createElement('div');
         recipeItem.innerHTML = `<div class="w3-animate-top rounded-md border-l-4 border-yellow-500 bg-yellow-100 p-3 origin-center" style="margin-top: 20px;">
         <div class="flex items-center justify-between space-x-4">
@@ -49,11 +46,9 @@ document.querySelector('#button').addEventListener('click', function () {
           <div>
             <p class=" size text-sm font-medium text-yellow-600">
              Invalid Prompt
-              
             </p>
           </div>
           <div>
-          
           </div>
         </div>
       </div>
@@ -62,12 +57,9 @@ document.querySelector('#button').addEventListener('click', function () {
       setTimeout(function () {
     notfound.style.translateX = 'left'
         notfound.parentNode.removeChild(notfound);
-       
       },5000)
-    
        }
        else
-       
             document.querySelector('#search-recipe').style.height = '200px';
             bodyc.style.backgroundColor = 'white'
             console.log(result[0])
@@ -87,7 +79,9 @@ document.querySelector('#button').addEventListener('click', function () {
            // recipeItem.innerHTML =` <p data-aos="fade-up" data-aos-delay="300" class="text-justify">No recipes found.</p>`
         }
     });
- 
 })
- 
+$(document).ready(function() {
+  var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+  myModal.show();
+});
 // document.querySelector('#button').addEventListener()
